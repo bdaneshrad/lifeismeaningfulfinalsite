@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Life is Meaningful — helping you find clarity and direction by decoding the most meaningful moments of your life.">
+  <title>Life is Meaningful</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ─── NAVIGATION ─── -->
+  <nav id="main-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner container">
+
+      <!-- Logo — top left, always links home -->
+      <a href="index.html" class="nav-logo-link" aria-label="life is meaningful — home">
+        <img src="assets/images/logo.png" alt="life is meaningful" class="nav-logo">
+      </a>
+
+      <!-- Desktop links -->
+      <div class="nav-links">
+        <a href="about.html">About</a>
+        <a href="circle-of-meaning.html">The Circle of Meaning</a>
+        <a href="#email-capture">Newsletter</a>
+        <a href="share-a-moment.html">Share your Moment</a>
+        <a href="https://www.instagram.com/lifeismeaningfulproject" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <!-- Line-style Instagram icon -->
+          <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile dropdown menu -->
+    <div id="mobile-menu" role="menu">
+      <a href="about.html" role="menuitem">About</a>
+      <a href="circle-of-meaning.html" role="menuitem">The Circle of Meaning</a>
+      <a href="#email-capture" role="menuitem">Newsletter</a>
+      <a href="share-a-moment.html" role="menuitem">Share your Moment</a>
+      <a href="https://www.instagram.com/lifeismeaningfulproject" target="_blank" rel="noopener noreferrer" role="menuitem">Instagram</a>
+    </div>
+  </nav>
+
+  <!-- ─── SECTION 1: HERO ─── -->
+  <!--
+    VIDEO SWAP NOTE (April 2026):
+    Replace <img class="hero-media" ...> with:
+    <video class="hero-media" src="assets/video/hero-bg.mp4" autoplay muted loop playsinline></video>
+    Overlay, content, and all styling remain unchanged.
+  -->
+  <section id="hero" class="section">
+
+    <!-- Background image — swap src for video after April 2026 filming -->
+    <img class="hero-media" src="assets/images/hero-bg.png" alt="">
+
+    <!-- Warm cream overlay — ~30% opacity, softens the image -->
+    <div class="hero-overlay"></div>
+
+    <!-- Hero content — centered over the image -->
+    <div class="hero-content">
+
+      <!-- Logo -->
+      <div class="hero-logo">
+        <img src="assets/images/logo.png" alt="Life is Meaningful" class="hero-logo-img">
+      </div>
+
+      <!-- Headline -->
+      <h1 class="hero-headline display">what is the most meaningful moment of your life?</h1>
+
+      <!-- Rotating subtext — phrase cycles, anchor is static -->
+      <p class="hero-subtext">
+        <span id="rotating-phrase"></span><span class="hero-anchor"> exists in your most meaningful moments.</span>
+      </p>
+
+      <!-- Buttons + micro-copy -->
+      <div class="hero-buttons">
+        <div class="hero-btn-primary-wrap">
+          <a href="#email-capture" class="btn btn-primary">Read a Moment</a>
+          <p class="hero-microcopy">
+            <span class="hero-microcopy-title">The life is meaningful letter</span>
+            <span class="hero-microcopy-desc">One human's most meaningful moment — every Sunday.</span>
+          </p>
+        </div>
+        <div class="hero-btn-secondary-wrap">
+          <a href="https://www.instagram.com/lifeismeaningfulproject" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">See a Moment</a>
+          <p class="hero-microcopy">
+            <span class="hero-microcopy-desc">Moments posted everyday</span>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom bleed — hero image bleeds softly into Section 2 -->
+    <div class="bleed-bottom bleed-to-cream-bottom"></div>
+
+  </section>
+
+  <!-- ─── SECTION 2: THE MISSION ─── -->
+  <section id="mission" class="section">
+    <div class="container">
+
+      <!-- Line 1 — faster entry: shorter duration, lighter blur -->
+      <p class="mission-line"
+         data-animate="blur-text"
+         data-delay="0"
+         data-blur="4"
+         data-duration="0.4">As a society we've never had a space to explore, understand, and align with what's meaningful to us. Instead, society conditions us into a value system of status, wealth, and approval, leaving us looking in the mirror wondering what we value and where our life is headed.</p>
+
+      <!-- Line 2 — impact line -->
+      <p class="mission-line mission-impact"
+         data-animate="blur-text"
+         data-delay="400">That changes now.</p>
+
+      <!-- Line 3 -->
+      <p class="mission-line"
+         data-animate="blur-text"
+         data-delay="800">life is meaningful exists to help you find direction, clarity, and purpose by decoding the most meaningful moments of your life.</p>
+
+      <!-- Line 4 -->
+      <p class="mission-line"
+         data-animate="blur-text"
+         data-delay="1200">Who you are and who you are meant to be live in those moments of meaning.</p>
+
+      <!-- Line 5 — closing tagline with decorative rules -->
+      <div class="mission-tagline-wrap">
+        <div class="mission-tagline-rule" data-animate="blur-fade" data-delay="1500" aria-hidden="true">
+          <span class="rule-cap"></span>
+          <span class="rule-line"></span>
+          <span class="rule-cap"></span>
+        </div>
+        <p class="mission-tagline"
+           data-animate="blur-text"
+           data-delay="1600">your moments are the answer</p>
+        <div class="mission-tagline-rule" data-animate="blur-fade" data-delay="1700" aria-hidden="true">
+          <span class="rule-cap"></span>
+          <span class="rule-line"></span>
+          <span class="rule-cap"></span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── SECTION 3: THE CONTENT FEED ─── -->
+  <section id="feed" class="section">
+    <div class="container">
+
+      <!-- Section label -->
+      <p class="label feed-label" data-animate="blur-fade">Filmed in Central Park and Around the World</p>
+
+      <!-- Behold.so Instagram feed embed -->
+      <div class="feed-area" data-animate="blur-fade" data-delay="100">
+        <behold-widget feed-id="FdAg74Y7YQWEociTQKaY"></behold-widget>
+      </div>
+
+      <!-- Below feed — stays unchanged -->
+      <p class="feed-below-copy" data-animate="blur-fade" data-delay="200">Every week, someone new sits down and answers the question.</p>
+
+      <a href="https://www.instagram.com/lifeismeaningfulproject"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn btn-outline feed-cta"
+         data-animate="blur-fade"
+         data-delay="300">See a Moment →</a>
+
+    </div>
+  </section>
+
+  <!-- ─── SECTION 4: SOCIAL PROOF / STATS ─── -->
+  <section id="stats" class="section">
+    <div class="container">
+
+      <!-- Harvard stat — large, centered, counts up on scroll -->
+      <div class="harvard-stat" data-animate="blur-fade" data-delay="0">
+        <span class="stat-number harvard-stat-number"
+              data-count="58"
+              data-suffix="%">58%</span>
+        <span class="harvard-stat-label">of young adults reported a lack of meaning or purpose in their lives</span>
+        <span class="stat-citation">— Harvard Graduate School of Education, 2023</span>
+      </div>
+
+      <!-- Divider beneath Harvard stat -->
+      <div class="stats-divider" data-animate="blur-fade" data-delay="100"></div>
+
+      <!-- Label above interview stats -->
+      <span class="label stats-interviews-label" data-animate="blur-fade" data-delay="150">From Our Own Interviews</span>
+
+      <!-- Four existing stats -->
+      <div class="stats-grid">
+
+        <!-- Stat 1 — moments collected (driven by MOMENTS_COUNT config) -->
+        <div class="stat-block" data-animate="blur-fade" data-delay="0">
+          <span class="stat-number"
+                data-count-id="moments"
+                data-count="100"
+                data-suffix="+">100+</span>
+          <span class="stat-label">moments collected so far</span>
+        </div>
+
+        <!-- Stat 2 -->
+        <div class="stat-block" data-animate="blur-fade" data-delay="100">
+          <span class="stat-number" data-count="37" data-suffix="%">37%</span>
+          <span class="stat-label">involved family</span>
+        </div>
+
+        <!-- Stat 3 -->
+        <div class="stat-block" data-animate="blur-fade" data-delay="200">
+          <span class="stat-number" data-count="30" data-suffix="%">30%</span>
+          <span class="stat-label">involved another person</span>
+        </div>
+
+        <!-- Stat 4 -->
+        <div class="stat-block" data-animate="blur-fade" data-delay="300">
+          <span class="stat-number" data-count="27" data-suffix="%">27%</span>
+          <span class="stat-label">came out of something hard</span>
+        </div>
+
+      </div>
+
+      <!-- Line below stats -->
+      <p class="stats-caption" data-animate="blur-fade" data-delay="400">Behind every number is a moment that is telling someone who they are and what they value.</p>
+
+    </div>
+  </section>
+
+  <!-- ─── SECTION 5: EMAIL CAPTURE ─── -->
+  <section id="email-capture" class="section email-section">
+
+    <!-- Top bleed — cream flows into the dark section -->
+    <div class="bleed-top bleed-to-cream-top"></div>
+
+    <div class="container email-container">
+
+      <!-- Headline — BlurText word-by-word animation -->
+      <h2 class="email-headline"
+          data-animate="blur-text">The life is meaningful letter</h2>
+
+      <!-- Subheadline -->
+      <p class="email-subheadline"
+         data-animate="blur-fade"
+         data-delay="200">Every Sunday — a letter with one human's most meaningful moment helping you understand and align with your own moments.</p>
+
+      <!-- Beehiiv embed — width overridden to 100%, background transparent -->
+      <div class="email-form-wrap"
+           data-animate="blur-fade"
+           data-delay="400">
+        <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+        <iframe src="https://subscribe-forms.beehiiv.com/2c981754-bca5-4472-9527-0301b833cf89"
+                class="beehiiv-embed"
+                data-test-id="beehiiv-embed"
+                frameborder="0"
+                scrolling="no"
+                style="width: 100%; height: 429px; margin: 0; border-radius: 0 !important; background-color: transparent !important; box-shadow: none; max-width: 100%; border: none;"></iframe>
+      </div>
+
+      <!-- Mobile-only static share nudge — no JS, CSS show/hide only -->
+      <p class="email-mobile-share-nudge">If you want your moment featured in the newsletter, <a href="share-a-moment.html" class="email-mobile-share-link">share it here</a>.</p>
+
+      <!-- Thank you message — fades in 3s after user clicks into the iframe -->
+      <div id="beehiiv-thankyou" class="email-thankyou">
+        <p class="email-thankyou-primary">Thank you for joining. Your first letter arrives this Sunday.</p>
+        <p class="email-thankyou-secondary">If you'd like your moment featured in the newsletter — <a href="share-a-moment.html" class="email-thankyou-link">share it here</a>.</p>
+      </div>
+
+    </div>
+
+    <!-- Bottom bleed — dark fades back to cream -->
+    <div class="bleed-bottom bleed-to-cream-bottom"></div>
+
+  </section>
+
+  <!-- ─── SECTION 6: BY BENNETT ─── -->
+  <section id="bennett" class="section">
+    <div class="container bennett-inner">
+
+      <!-- Left column — photo -->
+      <div class="bennett-photo-col" data-animate="blur-fade">
+        <img src="assets/images/bennett-photo.png"
+             alt="Bennett Daneshrad"
+             class="bennett-photo">
+      </div>
+
+      <!-- Right column — text -->
+      <div class="bennett-text-col" data-animate="blur-fade">
+
+        <span class="label bennett-label">By Bennett</span>
+
+        <p class="bennett-body">Hi. My name is Bennett. I started life is meaningful by accident at the University of Michigan — I set up a table, two chairs, and a sign that said tell me the most meaningful moment of your life. One hundred people sat down with me.</p>
+
+        <p class="bennett-body">What I found stunned me: our most meaningful moments are guides to who we are, what we value, and what our purpose is. But we've never had a space to understand and align with them. I'm building life is meaningful to be that space to help you live a life of consistent meaning.</p>
+
+        <p class="bennett-body bennett-contact">If you'd like to work with me personally and go deeper into your meaningful moments — reach out anytime <a href="mailto:bennett@lifeismeaningful.org" class="bennett-email">bennett@lifeismeaningful.org</a></p>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── SECTION 7: CONTACT ─── -->
+  <section id="contact" class="section">
+    <div class="container contact-container">
+
+      <span class="label contact-label" data-animate="blur-fade">Get in Touch</span>
+
+      <h2 class="contact-headline"
+          data-animate="blur-fade"
+          data-delay="100">Collaborate about Meaning</h2>
+
+      <p class="contact-subtext"
+         data-animate="blur-fade"
+         data-delay="200">Whether you want to share your story, collaborate, or are genuinely curious about going deeper with your own moments — Bennett reads every message personally.</p>
+
+      <div class="contact-form-wrap"
+           data-animate="blur-fade"
+           data-delay="300">
+
+        <form id="contact-form"
+              action="https://formspree.io/f/xlgonkdj"
+              method="POST">
+
+          <input type="hidden" name="_subject" value="New Contact — life is meaningful">
+          <input type="hidden" name="_replyto" id="contact-replyto">
+
+          <div class="form-field">
+            <input type="text"
+                   name="name"
+                   placeholder="Name"
+                   autocomplete="name"
+                   required>
+          </div>
+
+          <div class="form-field">
+            <input type="email"
+                   name="email"
+                   placeholder="Email"
+                   autocomplete="email"
+                   required
+                   oninput="document.getElementById('contact-replyto').value=this.value">
+          </div>
+
+          <div class="form-field">
+            <textarea name="message"
+                      rows="5"
+                      placeholder="What's on your mind?"
+                      required></textarea>
+          </div>
+
+          <button type="submit" class="contact-submit-btn">Send It</button>
+
+        </form>
+
+        <!-- Confirmation — fades in on submit, replaces form -->
+        <div id="contact-confirmation" class="contact-confirmation" style="display:none; opacity:0;">
+          <p>Got it. Bennett will read this himself.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── SECTION 8: FOOTER ─── -->
+  <footer id="footer" class="section footer-section">
+
+    <!-- Top bleed — cream flows into dark footer -->
+    <div class="bleed-top bleed-to-cream-top"></div>
+
+    <div class="container footer-container">
+
+      <!-- Logo — cream, small, centered -->
+      <div class="footer-logo-wrap" data-animate="blur-fade">
+        <img src="assets/images/logo.png"
+             alt="Life is Meaningful"
+             class="footer-logo">
+      </div>
+
+      <!-- Closing line — the founding question, same as the hero opening -->
+      <p class="footer-closing" data-animate="blur-fade" data-delay="100">What is the most meaningful moment of your life?</p>
+
+      <!-- Social icons -->
+      <div class="footer-social" data-animate="blur-fade" data-delay="200">
+
+        <!-- Instagram — live immediately -->
+        <a href="https://www.instagram.com/lifeismeaningfulproject"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="footer-social-link"
+           aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+
+        <!-- TikTok — live immediately. Update href to your TikTok profile URL. -->
+        <a href="https://www.tiktok.com/@lifeismeaningfulproject"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="footer-social-link"
+           aria-label="TikTok">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
+          </svg>
+        </a>
+
+        <!-- YouTube — muted and unlinked until channel is active -->
+        <span class="footer-social-link footer-social-muted" aria-label="YouTube — coming soon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
+            <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/>
+          </svg>
+        </span>
+
+      </div>
+
+      <!-- Footer nav links -->
+      <nav class="footer-nav" aria-label="Footer navigation" data-animate="blur-fade" data-delay="300">
+        <a href="#email-capture">Newsletter</a>
+        <span class="footer-nav-sep">—</span>
+        <a href="about.html">About</a>
+      </nav>
+
+      <!-- Copyright -->
+      <p class="footer-copyright" data-animate="blur-fade" data-delay="400">© 2026 life is meaningful™ — All rights reserved</p>
+
+    </div>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/framer-motion@11/dist/framer-motion.js"></script>
+  <script src="scripts.js"></script>
+  <script>(() => { const d=document,s=d.createElement("script");s.type="module";s.src="https://w.behold.so/widget.js";d.head.append(s); })()</script>
+</body>
+</html>
