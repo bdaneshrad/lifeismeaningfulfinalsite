@@ -1,7 +1,7 @@
 // ─────────────────────────────────────────
 // CONFIG — edit these values without touching the rest of the code
 // ─────────────────────────────────────────
-const MOMENTS_COUNT = 100; // Update this number as more moments are collected
+const MOMENTS_COUNT = 200; // Update this number as more moments are collected
 
 
 // ─────────────────────────────────────────

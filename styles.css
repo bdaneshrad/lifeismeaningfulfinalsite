@@ -329,21 +329,44 @@ body {
 /* Buttons row — primary (filled) + secondary (outline), side by side */
 .hero-buttons {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
   animation: heroFadeIn 0.8s ease 1.1s forwards;
   opacity: 0;
 }
 
-/* Wrap for primary button + its micro-copy stacked together */
-.hero-btn-primary-wrap,
-.hero-btn-secondary-wrap {
+.hero-btn-row {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Filled primary button */
+.btn-filled {
+  background-color: #F5F0E8;
+  color: #1A1A1A;
+  border: 1px solid #F5F0E8;
+  width: 100%;
+  text-align: center;
+}
+
+.hero-btn-col {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+  flex: 1;
+}
+
+.hero-btn-subtext {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-style: italic;
+  color: rgba(245, 240, 232, 0.8);
+  text-align: center;
 }
 
 /* Shared button base */
@@ -512,6 +535,16 @@ body {
 
 .feed-label {
   /* inherits .label utility — tracked caps, warm gray, sans-serif */
+}
+
+.feed-archive-line {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-style: italic;
+  font-size: 56px;
+  color: #1A1A1A;
+  text-align: center;
+  margin-bottom: 48px;
 }
 
 /* Feed area */
@@ -913,7 +946,7 @@ behold-widget {
 }
 
 .bennett-photo {
-  width: 65%;
+  width: 100%;
   height: auto;
   display: block;
 }
@@ -1822,13 +1855,19 @@ body:has(.com-page) #main-nav {
     width: 100%;
     gap: 12px;
   }
-  .hero-btn-primary-wrap,
-  .hero-btn-secondary-wrap {
-    width: 100%;
+  .hero-btn-row {
+    flex-direction: column;
+    gap: 12px;
   }
   .btn {
     min-width: unset;
     width: 100%;
+  }
+
+  /* Feed archive title — mobile */
+  .feed-archive-line {
+    font-size: 36px;
+    margin-bottom: 32px;
   }
 
   /* Harvard stat — mobile */
