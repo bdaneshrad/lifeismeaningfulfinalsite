@@ -411,38 +411,6 @@ function initShareForm() {
 
 
 // ─────────────────────────────────────────
-// BEEHIIV THANK YOU MESSAGE
-// When the user clicks anywhere in the iframe area, wait 3s then fade in
-// a static thank-you message beneath the embed.
-// ─────────────────────────────────────────
-function initBeehiivThankyou() {
-  const iframe  = document.querySelector('.beehiiv-embed');
-  const message = document.getElementById('beehiiv-thankyou');
-  if (!iframe || !message) return;
-
-  let triggered = false;
-
-  function showMessage() {
-    if (triggered) return;
-    triggered = true;
-    setTimeout(() => {
-      message.classList.add('is-visible');
-    }, 3000);
-  }
-
-  // Fires when the user clicks into the iframe (focus moves from page to iframe)
-  window.addEventListener('blur', () => {
-    setTimeout(() => {
-      if (document.activeElement === iframe) showMessage();
-    }, 50);
-  });
-
-  // Also catch a direct click on the iframe element itself
-  iframe.addEventListener('click', showMessage);
-}
-
-
-// ─────────────────────────────────────────
 // INIT ALL
 // Runs after DOM is fully loaded
 // ─────────────────────────────────────────
@@ -458,5 +426,4 @@ document.addEventListener('DOMContentLoaded', () => {
   initEmailForm();
   initMomentForm();
   initShareForm();
-  initBeehiivThankyou();
 });

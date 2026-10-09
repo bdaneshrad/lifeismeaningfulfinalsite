@@ -14,7 +14,7 @@ Then open http://localhost:3000
 - `assets/images/logo.png` — LiM logo, transparent background (provided by Bennett)
 
 ## Third-party integrations
-- **Beehiiv** — Email capture form (Section 5). Replace native HTML form with Beehiiv embed when Bennett provides code.
+- **Substack** — Email capture form (Section 5). Substack embed for newsletter signup.
 - **Behold.so** — Instagram feed (Section 3). Replace launch placeholder card when Bennett provides embed code.
 - **Formspree** — Contact form (Section 7). Replace `YOUR_FORM_ID` in form action with actual Formspree endpoint.
 

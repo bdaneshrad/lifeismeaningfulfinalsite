@@ -788,7 +788,7 @@ behold-widget {
   opacity: 0.85;
 }
 
-/* Temporary share link beneath Beehiiv embed */
+/* Temporary share link beneath Substack embed */
 .email-share-link {
   font-family: var(--font-display);
   font-weight: var(--weight-light);
@@ -1630,7 +1630,7 @@ body:has(.com-page) #main-nav {
 }
 
 /* ─────────────────────────────────────────
-   BEEHIIV THANK YOU MESSAGE
+   SUBSTACK THANK YOU MESSAGE
 ───────────────────────────────────────── */
 .email-thankyou {
   display: flex;
@@ -1923,8 +1923,8 @@ body:has(.com-page) #main-nav {
     max-width: 100%;
   }
 
-  /* Feed — Beehiiv embed mobile */
-  .beehiiv-embed {
+  /* Feed — Substack embed mobile */
+  .substack-embed {
     height: 380px !important;
   }
 
