@@ -1,23 +1,30 @@
-# Life is Meaningful
+# life is meaningful
 
-Website for lifeismeaningful.org — built in plain HTML/CSS/JS, hosted on GitHub Pages.
+The website for lifeismeaningful.org. Plain HTML, CSS and one small script, published with GitHub Pages.
 
-## Local development
-```
-npx serve .
-```
-Then open http://localhost:3000
+## Pages
+- `index.html` Home
+- `meaning-map.html` The Meaning Map
+- `meaning-drivers.html` The 27 Meaning Drivers
+- `archive.html` Explore the Archive
+- `watch.html` Watch moments
+- `letter.html` The life is meaningful letter
+- `archetype.html` Find your meaning archetype
+- `about.html` About
+- `circle-of-meaning.html` The Circle of Meaning
+- `share-a-moment.html` Apply to share your moment
+- `legal.html` Privacy, terms and refunds
 
-## Assets needed
-- `assets/images/hero-bg.jpg` — Central Park hero image (provided by Bennett)
-- `assets/images/bennett-photo.jpg` — Candid photo of Bennett (provided by Bennett)
-- `assets/images/logo.png` — LiM logo, transparent background (provided by Bennett)
+## Shared files
+- `site.css` fonts, the phone menu, focus outlines
+- `site.js` opens and closes the phone menu
+- `assets/` photos and logos
+- `fonts/` Cormorant Garamond and EB Garamond
 
-## Third-party integrations
-- **Substack** — Email capture form (Section 5). Substack embed for newsletter signup.
-- **Behold.so** — Instagram feed (Section 3). Replace launch placeholder card when Bennett provides embed code.
-- **Formspree** — Contact form (Section 7). Replace `YOUR_FORM_ID` in form action with actual Formspree endpoint.
+## Outside services
+- **Substack**: every "Get the letter" form hands the email address to `lifeismeaningful.substack.com/subscribe`.
+- **Formspree**: the application form on `share-a-moment.html` posts to the same form the previous site used.
 
-## Notes
-- Hero is built with `<img>` overlay. Swap to `<video>` after April 2026 filming by replacing the `<img>` tag — overlay and content structure unchanged.
-- `MOMENTS_COUNT` variable at top of `scripts.js` controls the Section 4 counter. Update manually as the number grows.
+## Still to connect
+- The Meaning Map checkout link (the last button on `meaning-map.html` goes to the letter page until then).
+- The free archetype (the form on `archetype.html` collects the email until then).

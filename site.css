@@ -1,0 +1,23 @@
+@font-face{font-family:'Cormorant Garamond';font-weight:400;font-style:normal;font-display:swap;src:url(fonts/cormorant-garamond-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-weight:400;font-style:italic;font-display:swap;src:url(fonts/cormorant-garamond-latin-400-italic.woff2) format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-weight:500;font-style:normal;font-display:swap;src:url(fonts/cormorant-garamond-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-weight:500;font-style:italic;font-display:swap;src:url(fonts/cormorant-garamond-latin-500-italic.woff2) format('woff2')}
+@font-face{font-family:'EB Garamond';font-weight:400;font-style:normal;font-display:swap;src:url(fonts/eb-garamond-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'EB Garamond';font-weight:400;font-style:italic;font-display:swap;src:url(fonts/eb-garamond-latin-400-italic.woff2) format('woff2')}
+@font-face{font-family:'EB Garamond';font-weight:500;font-style:normal;font-display:swap;src:url(fonts/eb-garamond-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'EB Garamond';font-weight:500;font-style:italic;font-display:swap;src:url(fonts/eb-garamond-latin-500-italic.woff2) format('woff2')}
+html{-webkit-text-size-adjust:100%}
+body{margin:0}
+img{max-width:100%}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid #E3B25A;outline-offset:3px}
+button{cursor:pointer}
+.menu-btn{display:none;font:inherit;font-size:19px;background:none;color:inherit;border:1px solid currentColor;padding:9px 18px;min-height:46px}
+.form-note{margin:0;font-size:18px}
+.hp{position:absolute;left:-9999px}
+@media (max-width:860px){
+  .menu-btn{display:block}
+  .site-nav .menu{display:none !important;width:100%;flex-direction:column;align-items:flex-start !important;gap:0 !important;padding:8px 0 12px}
+  .site-nav.open .menu{display:flex !important}
+  .site-nav .menu a{padding:12px 0 !important;font-size:22px}
+  .site-nav .menu a:last-child{margin-top:10px;padding:13px 22px !important}
+}

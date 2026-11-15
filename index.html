@@ -1,436 +1,274 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Life is Meaningful — helping you find clarity and direction by decoding the most meaningful moments of your life.">
-  <title>Life is Meaningful</title>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>life is meaningful · your moments are the answer</title>
+<meta name="description" content="Discover the meaning in your life. It is in the moments you have already lived.">
+<link rel="canonical" href="https://lifeismeaningful.org/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="life is meaningful">
+<meta property="og:title" content="life is meaningful · your moments are the answer">
+<meta property="og:description" content="Discover the meaning in your life. It is in the moments you have already lived.">
+<meta property="og:url" content="https://lifeismeaningful.org/">
+<meta property="og:image" content="https://lifeismeaningful.org/assets/bella-sept.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/logo-ink.png">
+<link rel="preload" href="fonts/eb-garamond-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/cormorant-garamond-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="site.css">
+<style>
+.md-sheet{max-width:1128px;margin:clamp(32px,4vw,56px) auto 0;background:#F7F2E9;border:1px solid #221E18;padding:clamp(24px,4vw,56px);box-sizing:border-box;display:flex;flex-direction:column;gap:clamp(24px,3vw,40px)}
+.md-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(210px,100%),1fr));gap:32px 36px;align-items:start}
+.md-col{display:flex;flex-direction:column;gap:10px;border-top:3px solid var(--c);padding-top:16px}
+.md-col h4{margin:0;display:flex;justify-content:space-between;align-items:baseline;font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:30px;line-height:1.1;color:var(--c)}
+.md-col p{margin:0;font-style:italic;font-size:18px;line-height:1.35;color:#5C5242;min-height:2.7em}
+.md-col ul{list-style:none;margin:0;padding:0;font-family:'Cormorant Garamond',Georgia,serif;font-size:23px;line-height:1.2}
+.md-col li{border-top:1px solid #DDD3C0;padding:9px 0}
+a{color:inherit}a:hover{color:#8A5A16}
+footer a:hover{color:#E3B25A}
+@media (max-width: 820px){.hero-fade{background: rgba(247,242,233,.86) !important}}
+</style>
 </head>
 <body>
-
-  <!-- ─── NAVIGATION ─── -->
-  <nav id="main-nav" role="navigation" aria-label="Main navigation">
-    <div class="nav-inner container">
-
-      <!-- Logo — top left, always links home -->
-      <a href="index.html" class="nav-logo-link" aria-label="life is meaningful — home">
-        <img src="assets/images/logo.png" alt="life is meaningful" class="nav-logo">
-      </a>
-
-      <!-- Desktop links -->
-      <div class="nav-links">
-        <a href="about.html">About</a>
-        <a href="circle-of-meaning.html">The Circle of Meaning</a>
-        <a href="#email-capture">Newsletter</a>
-        <a href="share-a-moment.html">Share your Moment</a>
-        <a href="https://www.instagram.com/lifeismeaningfulproject" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <!-- Line-style Instagram icon -->
-          <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-            <circle cx="12" cy="12" r="4"/>
-            <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
-          </svg>
-        </a>
-      </div>
-
-      <!-- Mobile hamburger -->
-      <button id="hamburger" aria-label="Open menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-    </div>
-
-    <!-- Mobile dropdown menu -->
-    <div id="mobile-menu" role="menu">
-      <a href="about.html" role="menuitem">About</a>
-      <a href="circle-of-meaning.html" role="menuitem">The Circle of Meaning</a>
-      <a href="#email-capture" role="menuitem">Newsletter</a>
-      <a href="share-a-moment.html" role="menuitem">Share your Moment</a>
-      <a href="https://www.instagram.com/lifeismeaningfulproject" target="_blank" rel="noopener noreferrer" role="menuitem">Instagram</a>
-    </div>
-  </nav>
-
-  <!-- ─── SECTION 1: HERO ─── -->
-  <!--
-    VIDEO SWAP NOTE (April 2026):
-    Replace <img class="hero-media" ...> with:
-    <video class="hero-media" src="assets/video/hero-bg.mp4" autoplay muted loop playsinline></video>
-    Overlay, content, and all styling remain unchanged.
-  -->
-  <section id="hero" class="section">
-
-    <!-- Background image — swap src for video after April 2026 filming -->
-    <img class="hero-media" src="assets/images/hero-bg.png" alt="">
-
-    <!-- Warm cream overlay — ~30% opacity, softens the image -->
-    <div class="hero-overlay"></div>
-
-    <!-- Hero content — centered over the image -->
-    <div class="hero-content">
-
-      <!-- Logo -->
-      <div class="hero-logo">
-        <img src="assets/images/logo.png" alt="Life is Meaningful" class="hero-logo-img">
-      </div>
-
-      <!-- Headline -->
-      <h1 class="hero-headline display">what is the most meaningful moment of your life?</h1>
-
-      <!-- Rotating subtext — phrase cycles, anchor is static -->
-      <p class="hero-subtext">
-        <span id="rotating-phrase"></span><span class="hero-anchor"> exists in your most meaningful moments.</span>
-      </p>
-
-      <!-- Buttons + micro-copy -->
-      <div class="hero-buttons">
-        <a href="share-a-moment.html" class="btn btn-filled">Share your Moment</a>
-        <div class="hero-btn-row">
-          <div class="hero-btn-col">
-            <a href="#email-capture" class="btn btn-secondary">Join the Letter</a>
-            <span class="hero-btn-subtext">One human's moment in your inbox, every other Sunday.</span>
-          </div>
-          <div class="hero-btn-col">
-            <a href="https://www.instagram.com/lifeismeaningfulproject" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Watch a Moment</a>
-            <span class="hero-btn-subtext">Moments posted every day.</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Bottom bleed — hero image bleeds softly into Section 2 -->
-    <div class="bleed-bottom bleed-to-cream-bottom"></div>
-
-  </section>
-
-  <!-- ─── SECTION 2: THE MISSION ─── -->
-  <section id="mission" class="section">
-    <div class="container">
-
-      <!-- Line 1 -->
-      <p class="mission-line"
-         data-animate="line-fade"
-         data-delay="0">We've never had a space to explore and align with what's meaningful to us. Instead, society conditions us to chase status, success, and approval — leaving us looking in the mirror uncertain about our direction and disconnected from what's actually meaningful to us.</p>
-
-      <!-- Line 2 — impact line -->
-      <p class="mission-line mission-impact"
-         data-animate="line-fade"
-         data-delay="400">That changes now.</p>
-
-      <!-- Line 3 -->
-      <p class="mission-line"
-         data-animate="line-fade"
-         data-delay="800">life is meaningful exists to help you find direction, clarity, and purpose by decoding the most meaningful moments of your life.</p>
-
-      <!-- Line 4 -->
-      <p class="mission-line"
-         data-animate="line-fade"
-         data-delay="1200">Who you are and who you are meant to be live in those moments of meaning.</p>
-
-      <!-- Line 5 — closing tagline with decorative rules -->
-      <div class="mission-tagline-wrap">
-        <div class="mission-tagline-rule" data-animate="blur-fade" data-delay="1500" aria-hidden="true">
-          <span class="rule-cap"></span>
-          <span class="rule-line"></span>
-          <span class="rule-cap"></span>
-        </div>
-        <p class="mission-tagline"
-           data-animate="line-fade"
-           data-delay="1600">your moments are the answer</p>
-        <div class="mission-tagline-rule" data-animate="blur-fade" data-delay="1700" aria-hidden="true">
-          <span class="rule-cap"></span>
-          <span class="rule-line"></span>
-          <span class="rule-cap"></span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ─── SECTION 3: THE CONTENT FEED ─── -->
-  <section id="feed" class="section">
-    <div class="container">
-
-      <!-- Section label -->
-      <p class="feed-archive-line" data-animate="blur-fade">an archive of humans most meaningful moments</p>
-
-      <!-- Behold.so Instagram feed embed -->
-      <div class="feed-area" data-animate="blur-fade" data-delay="100">
-        <behold-widget feed-id="FdAg74Y7YQWEociTQKaY"></behold-widget>
-      </div>
-
-      <!-- Below feed — stays unchanged -->
-      <p class="feed-below-copy" data-animate="blur-fade" data-delay="200">Every day, one human's most meaningful moment is shared.</p>
-
-      <a href="https://www.instagram.com/lifeismeaningfulproject"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="btn btn-outline feed-cta"
-         data-animate="blur-fade"
-         data-delay="300">See a Moment →</a>
-
-    </div>
-  </section>
-
-  <!-- ─── SECTION 4: SOCIAL PROOF / STATS ─── -->
-  <section id="stats" class="section">
-    <div class="container">
-
-      <!-- Harvard stat — large, centered, counts up on scroll -->
-      <div class="harvard-stat" data-animate="blur-fade" data-delay="0">
-        <span class="stat-number harvard-stat-number"
-              data-count="58"
-              data-suffix="%">58%</span>
-        <span class="harvard-stat-label">of young adults reported a lack of meaning or purpose in their lives</span>
-        <span class="stat-citation">— Harvard Graduate School of Education, 2023</span>
-      </div>
-
-      <!-- Divider beneath Harvard stat -->
-      <div class="stats-divider" data-animate="blur-fade" data-delay="100"></div>
-
-      <!-- Label above interview stats -->
-      <span class="label stats-interviews-label" data-animate="blur-fade" data-delay="150">From Our Own Interviews</span>
-
-      <!-- Four existing stats -->
-      <div class="stats-grid">
-
-        <!-- Stat 1 — moments collected (driven by MOMENTS_COUNT config) -->
-        <div class="stat-block" data-animate="blur-fade" data-delay="0">
-          <span class="stat-number"
-                data-count-id="moments"
-                data-count="200"
-                data-suffix="+">200+</span>
-          <span class="stat-label">moments collected</span>
-        </div>
-
-        <!-- Stat 2 -->
-        <div class="stat-block" data-animate="blur-fade" data-delay="100">
-          <span class="stat-number" data-count="37" data-suffix="%">37%</span>
-          <span class="stat-label">involved family</span>
-        </div>
-
-        <!-- Stat 3 -->
-        <div class="stat-block" data-animate="blur-fade" data-delay="200">
-          <span class="stat-number" data-count="30" data-suffix="%">30%</span>
-          <span class="stat-label">involved another person</span>
-        </div>
-
-        <!-- Stat 4 -->
-        <div class="stat-block" data-animate="blur-fade" data-delay="300">
-          <span class="stat-number" data-count="27" data-suffix="%">27%</span>
-          <span class="stat-label">came out of something hard</span>
-        </div>
-
-      </div>
-
-      <!-- Line below stats -->
-      <p class="stats-caption" data-animate="blur-fade" data-delay="400">Behind every number is a moment that is telling someone who they are and what they value.</p>
-
-    </div>
-  </section>
-
-  <!-- ─── SECTION 5: EMAIL CAPTURE ─── -->
-  <section id="email-capture" class="section email-section">
-
-    <!-- Top bleed — cream flows into the dark section -->
-    <div class="bleed-top bleed-to-cream-top"></div>
-
-    <div class="container email-container">
-
-      <!-- Headline — BlurText word-by-word animation -->
-      <h2 class="email-headline"
-          data-animate="blur-text">The life is meaningful letter</h2>
-
-      <!-- Subheadline -->
-      <p class="email-subheadline"
-         data-animate="blur-fade"
-         data-delay="200">Every other Sunday — a letter with one human's most meaningful moment helping you understand and align with your own moments.</p>
-
-      <!-- Substack embed -->
-      <div class="email-form-wrap"
-           data-animate="blur-fade"
-           data-delay="400">
-        <iframe src="https://lifeismeaningful.substack.com/embed" style="max-width:480px; width:100%; height:320px; border:none; background:transparent;" frameborder="0" scrolling="no"></iframe>
-      </div>
-
-    </div>
-
-    <!-- Bottom bleed — dark fades back to cream -->
-    <div class="bleed-bottom bleed-to-cream-bottom"></div>
-
-  </section>
-
-  <!-- ─── SECTION 6: BY BENNETT ─── -->
-  <section id="bennett" class="section">
-    <div class="container bennett-inner">
-
-      <!-- Left column — photo -->
-      <div class="bennett-photo-col" data-animate="blur-fade">
-        <img src="assets/images/bennett-photo.png"
-             alt="Bennett Daneshrad"
-             class="bennett-photo">
-      </div>
-
-      <!-- Right column — text -->
-      <div class="bennett-text-col" data-animate="blur-fade">
-
-        <span class="label bennett-label">By Bennett</span>
-
-        <p class="bennett-body">Hi. My name is Bennett. I started life is meaningful by accident at the University of Michigan — I set up a table, two chairs, and a sign that said tell me the most meaningful moment of your life. One hundred people sat down with me.</p>
-
-        <p class="bennett-body">What I found stunned me: our most meaningful moments are guides to who we are, what we value, and what our purpose is. But we've never had a space to understand and align with them. I'm building life is meaningful to be that space to help you live a life of consistent meaning.</p>
-
-        <p class="bennett-body bennett-contact">If you'd like to work with me personally and go deeper into your meaningful moments — reach out anytime <a href="mailto:bennett@lifeismeaningful.org" class="bennett-email">bennett@lifeismeaningful.org</a></p>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ─── SECTION 7: CONTACT ─── -->
-  <section id="contact" class="section">
-    <div class="container contact-container">
-
-      <span class="label contact-label" data-animate="blur-fade">Get in Touch</span>
-
-      <h2 class="contact-headline"
-          data-animate="blur-fade"
-          data-delay="100">Collaborate about Meaning</h2>
-
-      <p class="contact-subtext"
-         data-animate="blur-fade"
-         data-delay="200">Whether you want to share your story, collaborate, or are genuinely curious about going deeper with your own moments — Bennett reads every message personally.</p>
-
-      <div class="contact-form-wrap"
-           data-animate="blur-fade"
-           data-delay="300">
-
-        <form id="contact-form"
-              action="https://formspree.io/f/xlgonkdj"
-              method="POST">
-
-          <input type="hidden" name="_subject" value="New Contact — life is meaningful">
-          <input type="hidden" name="_replyto" id="contact-replyto">
-
-          <div class="form-field">
-            <input type="text"
-                   name="name"
-                   placeholder="Name"
-                   autocomplete="name"
-                   required>
-          </div>
-
-          <div class="form-field">
-            <input type="email"
-                   name="email"
-                   placeholder="Email"
-                   autocomplete="email"
-                   required
-                   oninput="document.getElementById('contact-replyto').value=this.value">
-          </div>
-
-          <div class="form-field">
-            <textarea name="message"
-                      rows="5"
-                      placeholder="What's on your mind?"
-                      required></textarea>
-          </div>
-
-          <button type="submit" class="contact-submit-btn">Send It</button>
-
-        </form>
-
-        <!-- Confirmation — fades in on submit, replaces form -->
-        <div id="contact-confirmation" class="contact-confirmation" style="display:none; opacity:0;">
-          <p>Got it. Bennett will read this himself.</p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ─── SECTION 8: FOOTER ─── -->
-  <footer id="footer" class="section footer-section">
-
-    <!-- Top bleed — cream flows into dark footer -->
-    <div class="bleed-top bleed-to-cream-top"></div>
-
-    <div class="container footer-container">
-
-      <!-- Logo — cream, small, centered -->
-      <div class="footer-logo-wrap" data-animate="blur-fade">
-        <img src="assets/images/logo.png"
-             alt="Life is Meaningful"
-             class="footer-logo">
-      </div>
-
-      <!-- Closing line — the founding question, same as the hero opening -->
-      <p class="footer-closing" data-animate="blur-fade" data-delay="100">What is the most meaningful moment of your life?</p>
-
-      <!-- Social icons -->
-      <div class="footer-social" data-animate="blur-fade" data-delay="200">
-
-        <!-- Instagram — live immediately -->
-        <a href="https://www.instagram.com/lifeismeaningfulproject"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="footer-social-link"
-           aria-label="Instagram">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-            <circle cx="12" cy="12" r="4"/>
-            <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
-          </svg>
-        </a>
-
-        <!-- TikTok — live immediately. Update href to your TikTok profile URL. -->
-        <a href="https://www.tiktok.com/@lifeismeaningfulproject"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="footer-social-link"
-           aria-label="TikTok">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
-          </svg>
-        </a>
-
-        <!-- YouTube — muted and unlinked until channel is active -->
-        <span class="footer-social-link footer-social-muted" aria-label="YouTube — coming soon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
-            <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/>
-          </svg>
-        </span>
-
-      </div>
-
-      <!-- Footer nav links -->
-      <nav class="footer-nav" aria-label="Footer navigation" data-animate="blur-fade" data-delay="300">
-        <a href="#email-capture">Newsletter</a>
-        <span class="footer-nav-sep">—</span>
-        <a href="about.html">About</a>
-      </nav>
-
-      <!-- Copyright -->
-      <p class="footer-copyright" data-animate="blur-fade" data-delay="400">© 2026 life is meaningful™ — All rights reserved</p>
-
-    </div>
-
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/framer-motion@11/dist/framer-motion.js"></script>
-  <script src="scripts.js"></script>
-  <script>(() => { const d=document,s=d.createElement("script");s.type="module";s.src="https://w.behold.so/widget.js";d.head.append(s); })()</script>
+<div style="font-family: 'EB Garamond', Georgia, serif; color: #221E18; background: #F7F2E9; font-size: 21px; line-height: 1.6">
+
+<nav class="site-nav" aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 8px 32px; align-items: center; justify-content: space-between; padding: 18px clamp(20px, 6vw, 96px); border-bottom: 1px solid #221E18">
+<a href="./" aria-label="life is meaningful, home" style="display: flex; align-items: center; padding: 6px 0"><img src="assets/logo-ink.png" alt="life is meaningful" style="display: block; height: 40px; width: auto"></a>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-menu">Menu</button>
+<div id="site-menu" class="menu" style="display: flex; flex-wrap: wrap; gap: 4px 26px; align-items: baseline; font-size: 19px; font-style: italic">
+<a href="meaning-map.html" style="text-decoration: none; padding: 10px 0">Meaning Map</a>
+<a href="meaning-drivers.html" style="text-decoration: none; padding: 10px 0">Meaning Drivers</a>
+<a href="archive.html" style="text-decoration: none; padding: 10px 0">Archive</a>
+<a href="watch.html" style="text-decoration: none; padding: 10px 0">Watch</a>
+<a href="letter.html" style="text-decoration: none; padding: 10px 0">Letter</a>
+<a href="archetype.html" style="text-decoration: none; padding: 10px 0">Archetype</a>
+<a href="about.html" style="text-decoration: none; padding: 10px 0">About</a>
+<a href="meaning-map.html" style="font-style: normal; text-decoration: none; background: #221E18; color: #F7F2E9; padding: 11px 20px">Begin your Meaning Map</a>
+</div>
+</nav>
+
+<header style="position: relative; border-bottom: 1px solid #221E18; background: #F7F2E9">
+<img src="assets/bella-sept.jpg" alt="Bennett and a guest laughing together on two chairs in the park" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%">
+<div class="hero-fade" style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(247,242,233,.86) 0%, rgba(247,242,233,.7) 40%, rgba(247,242,233,.28) 72%, rgba(247,242,233,.18) 100%)"></div>
+<div style="position: relative; max-width: 1320px; margin: 0 auto; box-sizing: border-box; min-height: min(720px, 86svh); padding: clamp(64px, 9vw, 136px) clamp(20px, 6vw, 96px); display: flex; flex-direction: column; justify-content: center; gap: 26px; align-items: flex-start">
+<h1 style="margin: 0; max-width: 900px; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(44px, 6vw, 88px); line-height: 1.02; text-wrap: balance">discover the meaning in your life. <em style="font-style: italic">it's in the moments you've already lived.</em></h1>
+<p style="margin: 0; max-width: 560px; font-size: clamp(21px, 1.7vw, 24px)">I help you read your most meaningful moments, so you can find direction, clarity, and consistent meaning.</p>
+<a href="meaning-map.html" style="text-decoration: none; background: #221E18; color: #F7F2E9; padding: 17px 30px; font-size: 21px">Begin your Meaning Map</a>
+<a href="#free" style="font-style: italic; padding: 8px 0">or find your archetype, free</a>
+</div>
+</header>
+
+<section style="padding: clamp(56px, 7vw, 104px) clamp(20px, 6vw, 96px)">
+<div style="max-width: 1128px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 32px 64px; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; color: #6A5F4E">No. 1 · The question</p>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(34px, 3.8vw, 52px); line-height: 1.1">I've asked hundreds of people for the most meaningful moment of their life.</h2>
+<p style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: clamp(30px, 3.2vw, 42px); line-height: 1.15">what would yours be?</p>
+</div>
+<a href="https://www.instagram.com/lifeismeaningfulproject/" aria-label="Watch one moment on Instagram" style="position: relative; display: block; text-decoration: none; min-width: 0">
+<img src="assets/sylvia.jpg" alt="A guest holding the teddy bear beside Bennett, with her dog, in dappled sunlight" style="display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover">
+<span style="position: absolute; left: 20px; bottom: 20px; display: flex; gap: 12px; align-items: center; background: #F7F2E9; color: #221E18; padding: 10px 18px 10px 12px; font-size: 19px">
+<svg aria-hidden="true" width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="13" fill="none" stroke="#221E18" stroke-width="1.5"></circle><path d="M11 8.5v11l9-5.5z" fill="#221E18"></path></svg>
+watch one moment</span>
+</a>
+</div>
+</section>
+
+<section style="background: #EDE3CF; border-top: 1px solid #221E18; padding: clamp(56px, 7vw, 104px) clamp(20px, 6vw, 96px) 0">
+<div style="max-width: 1128px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 40px 80px; align-items: start">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; color: #5C5242">No. 2 · What we found</p>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(34px, 3.8vw, 52px); line-height: 1.1">every moment came back to the same 27 things.</h2>
+</div>
+<div style="display: flex; flex-direction: column; gap: 22px">
+<p style="margin: 0; max-width: 560px">I call them Meaning Drivers. They sit in four domains: Relational, Self, Transcendent and Expressive. Everyone has their own set, and yours has been shaping what feels meaningful to you all along.</p>
+
+</div>
+</div>
+<div class="md-sheet">
+<div style="display: flex; flex-direction: column; gap: 6px; align-items: center; text-align: center">
+<h3 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(34px, 4vw, 56px); line-height: 1.05">the 27 Meaning Drivers</h3>
+<p style="margin: 0; font-style: italic; color: #5C5242">Four domains. Twenty-seven things that make a moment meaningful.</p>
+</div>
+<div class="md-grid">
+<div class="md-col" style="--c: #B85A4C"><h4>Relational <span>9</span></h4><p>meaning through other people.</p><ul><li>Family</li><li>Love</li><li>Relationships</li><li>Connection</li><li>Community</li><li>Parenthood</li><li>Kindness</li><li>Mentorship and Teaching</li><li>Service</li></ul></div>
+<div class="md-col" style="--c: #4F6E99"><h4>Self <span>8</span></h4><p>meaning through who you are and who you become.</p><ul><li>Growth and Discovery</li><li>Authenticity</li><li>Resilience and Suffering</li><li>Accomplishment</li><li>Health and Well-being</li><li>Heritage</li><li>Purpose</li><li>Freedom</li></ul></div>
+<div class="md-col" style="--c: #5F8460"><h4>Transcendent <span>5</span></h4><p>meaning through something larger than you.</p><ul><li>Spirituality and Faith</li><li>Nature and Awe</li><li>Grief and Loss</li><li>Time</li><li>Gratitude and Perspective</li></ul></div>
+<div class="md-col" style="--c: #B5802A"><h4>Expressive <span>5</span></h4><p>meaning through doing, making, and play.</p><ul><li>Creativity and Expression</li><li>Art and Music</li><li>Adventure and Novelty</li><li>Joy and Play</li><li>Celebration</li></ul></div>
+</div>
+<a href="meaning-drivers.html" style="align-self: center; text-decoration: none; border: 1px solid #221E18; padding: 15px 28px">See all 27 Meaning Drivers</a>
+</div>
+<div style="max-width: 1360px; margin: clamp(32px, 4vw, 56px) auto 0">
+<svg role="img" aria-label="Pen and ink drawing of the park: trees, a path, lamp posts, two chairs and a sign" viewBox="0 0 1360 320" style="display: block; width: 100%; height: auto">
+<g fill="none" stroke="#221E18" stroke-linecap="round" stroke-linejoin="round">
+<path d="M0 262 C120 250 240 256 380 262 C520 268 640 252 800 256 C960 260 1100 250 1220 256 C1290 259 1330 262 1360 260" stroke-width="1.2"></path>
+<path d="M0 226 C80 208 160 218 240 208 C330 196 400 214 500 206 C600 198 690 212 790 204 C900 196 980 210 1080 202 C1180 194 1270 208 1360 200" stroke-width="0.7" opacity=".5"></path>
+<path d="M820 178 L820 150 L834 150 L834 132 L846 132 L846 160 L862 160 L862 120 L878 120 L878 146 L892 146 L892 170 L906 170 L906 138 L918 138 L918 176" stroke-width="0.6" opacity=".45"></path>
+<path d="M600 320 C624 296 652 280 700 270 C740 262 780 260 820 258" stroke-width="1"></path>
+<path d="M720 320 C736 300 762 284 800 274 C836 266 870 262 900 260" stroke-width="1"></path>
+<g transform="translate(-40,0) scale(1)"><path d="M166 262 C168 230 164 200 170 170 C173 150 168 132 160 116" stroke-width="1.6"></path><path d="M196 262 C194 232 198 204 192 176 C188 156 194 136 204 118" stroke-width="1.6"></path><path d="M170 170 C150 160 132 148 120 130 M192 176 C214 164 232 150 246 134" stroke-width="1.2"></path><path d="M176 240 C180 220 178 200 182 182 M186 250 C184 226 188 206 184 190" stroke-width="0.6"></path><path d="M92 132 C70 126 60 104 76 90 C66 70 88 50 108 58 C116 36 148 30 164 46 C180 28 216 30 226 52 C250 44 276 62 268 86 C290 96 288 126 266 132 C262 150 236 156 222 144 C206 158 178 156 168 142 C150 156 122 152 114 138 C106 142 98 138 92 132 Z" stroke-width="1.5"></path><path d="M100 104 C108 98 116 100 120 108 M134 74 C142 66 154 68 158 78 M184 62 C192 56 204 58 208 68 M228 92 C236 86 246 90 248 100 M150 116 C158 110 168 112 172 122 M204 118 C212 112 222 116 224 126 M118 82 C124 78 130 80 132 86 M196 92 C202 88 210 90 212 98" stroke-width="0.7"></path></g>
+<g transform="translate(1010,60) scale(0.76)"><path d="M166 262 C168 230 164 200 170 170 C173 150 168 132 160 116" stroke-width="1.6"></path><path d="M196 262 C194 232 198 204 192 176 C188 156 194 136 204 118" stroke-width="1.6"></path><path d="M170 170 C150 160 132 148 120 130 M192 176 C214 164 232 150 246 134" stroke-width="1.2"></path><path d="M176 240 C180 220 178 200 182 182 M186 250 C184 226 188 206 184 190" stroke-width="0.6"></path><path d="M92 132 C70 126 60 104 76 90 C66 70 88 50 108 58 C116 36 148 30 164 46 C180 28 216 30 226 52 C250 44 276 62 268 86 C290 96 288 126 266 132 C262 150 236 156 222 144 C206 158 178 156 168 142 C150 156 122 152 114 138 C106 142 98 138 92 132 Z" stroke-width="1.5"></path><path d="M100 104 C108 98 116 100 120 108 M134 74 C142 66 154 68 158 78 M184 62 C192 56 204 58 208 68 M228 92 C236 86 246 90 248 100 M150 116 C158 110 168 112 172 122 M204 118 C212 112 222 116 224 126 M118 82 C124 78 130 80 132 86 M196 92 C202 88 210 90 212 98" stroke-width="0.7"></path></g>
+<g transform="translate(1150,-6) scale(1.02)"><path d="M166 262 C168 230 164 200 170 170 C173 150 168 132 160 116" stroke-width="1.6"></path><path d="M196 262 C194 232 198 204 192 176 C188 156 194 136 204 118" stroke-width="1.6"></path><path d="M170 170 C150 160 132 148 120 130 M192 176 C214 164 232 150 246 134" stroke-width="1.2"></path><path d="M176 240 C180 220 178 200 182 182 M186 250 C184 226 188 206 184 190" stroke-width="0.6"></path><path d="M92 132 C70 126 60 104 76 90 C66 70 88 50 108 58 C116 36 148 30 164 46 C180 28 216 30 226 52 C250 44 276 62 268 86 C290 96 288 126 266 132 C262 150 236 156 222 144 C206 158 178 156 168 142 C150 156 122 152 114 138 C106 142 98 138 92 132 Z" stroke-width="1.5"></path><path d="M100 104 C108 98 116 100 120 108 M134 74 C142 66 154 68 158 78 M184 62 C192 56 204 58 208 68 M228 92 C236 86 246 90 248 100 M150 116 C158 110 168 112 172 122 M204 118 C212 112 222 116 224 126 M118 82 C124 78 130 80 132 86 M196 92 C202 88 210 90 212 98" stroke-width="0.7"></path></g>
+<g transform="translate(300,96) scale(0.62)"><path d="M166 262 C168 230 164 200 170 170 C173 150 168 132 160 116" stroke-width="1.6"></path><path d="M196 262 C194 232 198 204 192 176 C188 156 194 136 204 118" stroke-width="1.6"></path><path d="M170 170 C150 160 132 148 120 130 M192 176 C214 164 232 150 246 134" stroke-width="1.2"></path><path d="M176 240 C180 220 178 200 182 182 M186 250 C184 226 188 206 184 190" stroke-width="0.6"></path><path d="M92 132 C70 126 60 104 76 90 C66 70 88 50 108 58 C116 36 148 30 164 46 C180 28 216 30 226 52 C250 44 276 62 268 86 C290 96 288 126 266 132 C262 150 236 156 222 144 C206 158 178 156 168 142 C150 156 122 152 114 138 C106 142 98 138 92 132 Z" stroke-width="1.5"></path><path d="M100 104 C108 98 116 100 120 108 M134 74 C142 66 154 68 158 78 M184 62 C192 56 204 58 208 68 M228 92 C236 86 246 90 248 100 M150 116 C158 110 168 112 172 122 M204 118 C212 112 222 116 224 126 M118 82 C124 78 130 80 132 86 M196 92 C202 88 210 90 212 98" stroke-width="0.7"></path></g>
+<g transform="translate(250,0)">
+<path d="M300 262 L300 226 L326 226 L326 262 M300 244 L326 244 M298 226 C298 206 302 196 304 190 M326 226 L326 200 M304 190 L326 200" stroke-width="1.3"></path>
+<path d="M372 262 L372 226 L398 226 L398 262 M372 244 L398 244 M398 226 C400 208 396 196 394 190 M372 226 L372 200 M394 190 L372 200" stroke-width="1.3"></path>
+<path d="M336 264 L346 204 L356 264 M340 240 L352 240" stroke-width="1.1"></path>
+<rect x="328" y="168" width="38" height="46" stroke-width="1.3" fill="#F7F2E9"></rect>
+<path d="M334 180 L360 180 M334 188 L358 188 M334 196 L360 196 M334 204 L350 204" stroke-width="0.7"></path>
+</g>
+<g transform="translate(-90,0)"><path d="M560 262 L560 120" stroke-width="1.6"></path><path d="M552 262 L568 262 M554 256 L566 256" stroke-width="1.2"></path><path d="M548 120 L572 120 L567 98 L553 98 Z" stroke-width="1.3" fill="#F3D9A2"></path><path d="M553 98 C555 88 565 88 567 98 M560 88 L560 82" stroke-width="1.2"></path><path d="M536 110 L528 106 M584 110 L592 106 M560 72 L560 64 M542 90 L536 84 M578 90 L584 84" stroke-width="0.7" stroke="#B5852E"></path></g>
+<g transform="translate(420,0)"><path d="M560 262 L560 120" stroke-width="1.6"></path><path d="M552 262 L568 262 M554 256 L566 256" stroke-width="1.2"></path><path d="M548 120 L572 120 L567 98 L553 98 Z" stroke-width="1.3" fill="#F3D9A2"></path><path d="M553 98 C555 88 565 88 567 98 M560 88 L560 82" stroke-width="1.2"></path><path d="M536 110 L528 106 M584 110 L592 106 M560 72 L560 64 M542 90 L536 84 M578 90 L584 84" stroke-width="0.7" stroke="#B5852E"></path></g>
+<path d="M920 262 L920 240 L1000 240 L1000 262 M912 240 L1008 240 M916 228 L1004 228 M920 240 L920 226 M1000 240 L1000 226 M930 262 L930 248 M990 262 L990 248" stroke-width="1.2"></path>
+<path d="M760 70 C766 64 772 64 776 70 C780 64 786 64 792 70 M830 96 C834 92 838 92 841 96 C844 92 848 92 852 96 M700 50 C704 46 708 46 711 50 C714 46 718 46 722 50" stroke-width="0.8"></path>
+<path d="M60 296 L74 292 M210 306 L224 302 M470 298 L484 294 M900 300 L914 296 M1080 306 L1094 302 M1250 296 L1264 292 M560 290 L572 287" stroke-width="0.7" opacity=".6"></path>
+</g>
+</svg>
+</div>
+</section>
+
+<section style="background: #F3EEE4; border-top: 1px solid #1B2A41; border-bottom: 1px solid #1B2A41; padding: clamp(64px, 8vw, 120px) clamp(20px, 6vw, 96px)">
+<div style="max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 22px; align-items: center; text-align: center; color: #1F1C18">
+<p style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; color: #1B2A41">No. 3 · The Meaning Map</p>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(38px, 4.6vw, 64px); line-height: 1.06; color: #1B2A41">discover what drives meaning in your life.</h2>
+<p style="margin: 0">Deeper self clarity. A clearer life direction. Techniques for a life of consistent meaning. All drawn from your own most meaningful moments.</p>
+<p style="margin: 0">The Meaning Map is a guided reading of the meaning in your life. You share your most meaningful moments, and your Map decodes them to show you the unique set of Meaning Drivers and values inside them. Then it helps you discover and choose two Life Guiding Values that will help you live a life of consistent meaning.</p>
+<div style="width: 100%; box-sizing: border-box; background: #FAF7F0; border: 1px solid #1B2A41; padding: clamp(18px, 2.4vw, 28px); text-align: left; display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 26px; color: #1B2A41">what you get</h3>
+<ul style="margin: 0; padding: 0 0 0 22px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 4px 40px; font-size: 19px">
+<li>Your Meaning Signature and archetype</li>
+<li>The patterns across all of your moments</li>
+<li>Your Driver Constellation, drawn for you</li>
+<li>Your strongest Meaning Drivers, explained</li>
+<li>Your Domain Balance across the four domains</li>
+<li>Real stories from the archive most like yours</li>
+<li>Three alignment practices: daily, weekly, yearly</li>
+<li>Your full value set, and a guided way to choose your two Life Guiding Values</li>
+<li>The private life is meaningful community, free for the first 100 people</li>
+</ul>
+<a href="meaning-map.html" style="font-style: italic; padding: 10px 0; align-self: flex-start">See everything in the Meaning Map</a>
+</div>
+<figure style="margin: 0; width: 100%; display: flex; flex-direction: column; gap: 10px">
+<img src="assets/example-meaning-constellation.jpg" alt="An example Meaning Constellation: each Meaning Driver is a star in its domain color, sized by how many moments it appears in, with lines between drivers that share a moment" style="display: block; width: 100%; height: auto; border: 1px solid #1B2A41">
+<figcaption style="font-size: 18px; font-style: italic">An example Meaning Constellation, one chapter of a Meaning Map.</figcaption>
+</figure>
+<a href="meaning-map.html" style="text-decoration: none; background: #1B2A41; color: #FFFFFF; padding: 17px 30px; font-size: 21px">Begin your Meaning Map · $97</a>
+<p style="margin: 0; font-style: italic">If it doesn't show you something true about yourself, I'll refund you.</p>
+<p style="margin: 0; font-size: 18px; color: #5C5242">Your Map is written by AI, guided by my research and hundreds of real meaningful moments. You'll be reflecting on the most meaningful moments of your life, which may take time.</p>
+</div>
+</section>
+
+<section style="padding: clamp(56px, 7vw, 104px) clamp(20px, 6vw, 96px) 0">
+<div style="max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; text-align: center; align-items: center">
+<p style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; color: #6A5F4E">In their words</p>
+<p style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: clamp(28px, 3.2vw, 42px); line-height: 1.25">&ldquo;For me, I discovered that I make meaning through unstructured time with friends, and now I work to align my life around that.&rdquo;</p>
+<p style="margin: 0; color: #5C5242">Braden, startup founder</p>
+</div>
+</section>
+
+<section id="free" style="padding: clamp(56px, 7vw, 104px) clamp(20px, 6vw, 96px)">
+<div style="max-width: 1128px; margin: 0 auto; display: flex; flex-direction: column; gap: 44px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 24px 80px; align-items: end">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; color: #6A5F4E">No. 4 · Not ready yet</p>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(34px, 3.8vw, 52px); line-height: 1.1">everyone makes meaning differently.</h2>
+</div>
+<p style="margin: 0; max-width: 520px">Across hundreds of meaningful moments, I found six ways people make meaning. You make meaning in one of them, or in a mix of them. Which is yours?</p>
+</div>
+<ul style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 32px 48px">
+<li style="border-top: 3px solid #2E5A44; padding: 18px 0 6px; display: flex; flex-direction: column; gap: 6px">
+<h3 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 34px; line-height: 1.1; color: #2E5A44">The Seeker</h3>
+<p style="margin: 0; font-size: 17px; letter-spacing: .12em; text-transform: uppercase; color: #2E5A44">Becoming</p>
+<p style="margin: 0">You find meaning when you come through something and discover who you are.</p>
+</li>
+<li style="border-top: 3px solid #8A3A22; padding: 18px 0 6px; display: flex; flex-direction: column; gap: 6px">
+<h3 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 34px; line-height: 1.1; color: #8A3A22">The Anchor</h3>
+<p style="margin: 0; font-size: 17px; letter-spacing: .12em; text-transform: uppercase; color: #8A3A22">Bonds</p>
+<p style="margin: 0">You find meaning through the people you are bound to, including the ones you have lost.</p>
+</li>
+<li style="border-top: 3px solid #8F5E10; padding: 18px 0 6px; display: flex; flex-direction: column; gap: 6px">
+<h3 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 34px; line-height: 1.1; color: #8F5E10">The Connector</h3>
+<p style="margin: 0; font-size: 17px; letter-spacing: .12em; text-transform: uppercase; color: #8F5E10">Togetherness</p>
+<p style="margin: 0">You find meaning in being with people: friendship, play, kindness, celebration.</p>
+</li>
+<li style="border-top: 3px solid #3D5A78; padding: 18px 0 6px; display: flex; flex-direction: column; gap: 6px">
+<h3 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 34px; line-height: 1.1; color: #3D5A78">The Guide</h3>
+<p style="margin: 0; font-size: 17px; letter-spacing: .12em; text-transform: uppercase; color: #3D5A78">Contribution</p>
+<p style="margin: 0">You find meaning when you give something outward: teaching, serving, building, making.</p>
+</li>
+<li style="border-top: 3px solid #5B4A7A; padding: 18px 0 6px; display: flex; flex-direction: column; gap: 6px">
+<h3 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 34px; line-height: 1.1; color: #5B4A7A">The Witness</h3>
+<p style="margin: 0; font-size: 17px; letter-spacing: .12em; text-transform: uppercase; color: #5B4A7A">Perspective</p>
+<p style="margin: 0">You find meaning in a shift in how you see: gratitude, awe, time, where you come from.</p>
+</li>
+<li style="border-top: 3px solid #1F6767; padding: 18px 0 6px; display: flex; flex-direction: column; gap: 6px">
+<h3 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 34px; line-height: 1.1; color: #1F6767">The Free Spirit</h3>
+<p style="margin: 0; font-size: 17px; letter-spacing: .12em; text-transform: uppercase; color: #1F6767">Transcendence</p>
+<p style="margin: 0">You find meaning when you step beyond yourself: faith, the unknown, freedom.</p>
+</li>
+</ul>
+<div style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start">
+<a href="archetype.html" style="text-decoration: none; background: #221E18; color: #F7F2E9; padding: 17px 30px; font-size: 21px">Find your meaning archetype, free</a>
+</div>
+</div>
+</section>
+
+<section style="background-color: #141A14; color: #EDE6D8; padding: clamp(72px, 9vw, 136px) clamp(20px, 6vw, 96px)">
+<div style="max-width: 1128px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 40px 80px; align-items: center">
+<img src="assets/yves.jpg" alt="Yves in the park beside Bennett, holding the bear" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 10px solid #FFFFFF; box-sizing: border-box">
+<div style="display: flex; flex-direction: column; gap: 16px; align-items: flex-start; background: #141A14; padding: 28px">
+<p style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; color: #E3B25A">No. 5 · Explore the Archive</p>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(34px, 3.8vw, 52px); line-height: 1.1">the most meaningful moments of real people's lives.</h2>
+<p style="margin: 0; color: #D9D1C0">Hundreds of people have sat down and shared the most meaningful moment of their life. Read a few of them, in their own words.</p>
+<a href="archive.html" style="text-decoration: none; border: 1px solid #EDE6D8; color: #EDE6D8; padding: 15px 28px">Explore the Archive</a>
+</div>
+</div>
+</section>
+
+<section style="background: #EDE3CF; padding: clamp(56px, 7vw, 104px) clamp(20px, 6vw, 96px)">
+<div style="max-width: 1128px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 48px 80px">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(30px, 3.2vw, 42px)">the life is meaningful letter</h2>
+<p style="margin: 0; max-width: 480px">One person's most meaningful moment, in your inbox.</p>
+<form action="https://lifeismeaningful.substack.com/subscribe" method="get" target="_blank" rel="noopener" style="display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 240px">
+<label for="b-email" style="font-size: 18px; color: #5C5242">Email address</label>
+<input id="b-email" name="email" type="email" required style="font: inherit; padding: 12px 14px; border: 1px solid #221E18; background: #FFFFFF; min-height: 54px; box-sizing: border-box">
+</div>
+<button type="submit" style="font: inherit; background: #221E18; color: #F7F2E9; border: 0; padding: 0 26px; min-height: 54px">Get the letter</button>
+</form>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(30px, 3.2vw, 42px)">watch moments</h2>
+<p style="margin: 0">New moments every week.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 0 28px; font-style: italic">
+<a href="https://www.instagram.com/lifeismeaningfulproject/" style="padding: 10px 0">Instagram</a><a href="https://www.youtube.com/@Lifeismeaningfulproject" style="padding: 10px 0">YouTube</a><a href="https://www.tiktok.com/@lifeismeaningfulproject" style="padding: 10px 0">TikTok</a><a href="https://lifeismeaningful.substack.com/" style="padding: 10px 0">Substack</a><a href="https://www.linkedin.com/in/bennett-daneshrad-78325b1b1/" style="padding: 10px 0">LinkedIn</a>
+</div>
+</div>
+</div>
+</section>
+
+<section style="border-top: 1px solid #221E18; padding: clamp(56px, 7vw, 104px) clamp(20px, 6vw, 96px)">
+<div style="max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px">
+<img src="assets/sign-dusk.jpg" alt="The park sign at dusk: tell me the most meaningful moment of your life" style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover">
+<p style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; color: #6A5F4E">A note from Bennett</p>
+<p style="margin: 0; font-size: 26px; line-height: 1.45">Hi. My name is Bennett. I started life is meaningful by accident at the University of Michigan. I set up a table, two chairs, and a sign that said <em>tell me the most meaningful moment of your life.</em> One hundred people sat down with me.</p>
+<p style="margin: 0">What I found was simple: our most meaningful moments are guides to who we are, what we value, and what our purpose is. But we've never had a space to understand and align with them. I'm building life is meaningful to be that space.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 14px; padding-top: 8px">
+<a href="meaning-map.html" style="text-decoration: none; background: #221E18; color: #F7F2E9; padding: 17px 30px; font-size: 21px">Begin your Meaning Map</a>
+<a href="https://www.instagram.com/lifeismeaningfulproject/" style="text-decoration: none; border: 1px solid #221E18; padding: 16px 30px; font-size: 21px">Watch moments</a>
+</div>
+</div>
+</section>
+
+<footer style="background: #221E18; padding: 36px clamp(20px, 6vw, 96px); display: flex; flex-wrap: wrap; gap: 8px 32px; justify-content: space-between; font-size: 18px; color: #D9D1C0">
+<span>life is meaningful · <em>your moments are the answer</em></span>
+<div style="display: flex; flex-wrap: wrap; gap: 0 24px">
+<a href="circle-of-meaning.html" style="padding: 10px 0">Circle of Meaning</a><a href="share-a-moment.html" style="padding: 10px 0">Apply to share your moment</a><a href="legal.html#privacy" style="padding: 10px 0">Privacy</a><a href="legal.html#terms" style="padding: 10px 0">Terms</a><a href="legal.html#refunds" style="padding: 10px 0">Refunds</a>
+</div>
+</footer>
+</div>
+<script src="site.js"></script>
 </body>
 </html>
