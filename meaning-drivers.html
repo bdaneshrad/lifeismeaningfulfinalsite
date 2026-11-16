@@ -19,6 +19,13 @@
 <link rel="stylesheet" href="site.css">
 <style>
 html{scroll-behavior:smooth}
+.md-sheet{max-width:1128px;margin:clamp(32px,4vw,56px) auto 0;background:#F7F2E9;border:1px solid #221E18;padding:clamp(24px,4vw,56px);box-sizing:border-box;display:flex;flex-direction:column;gap:clamp(24px,3vw,40px)}
+.md-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(210px,100%),1fr));gap:32px 36px;align-items:start}
+.md-col{display:flex;flex-direction:column;gap:10px;border-top:3px solid var(--c);padding-top:16px}
+.md-col h4{margin:0;display:flex;justify-content:space-between;align-items:baseline;font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:30px;line-height:1.1;color:var(--c)}
+.md-col p{margin:0;font-style:italic;font-size:18px;line-height:1.35;color:#5C5242;min-height:2.7em}
+.md-col ul{list-style:none;margin:0;padding:0;font-family:'Cormorant Garamond',Georgia,serif;font-size:23px;line-height:1.2}
+.md-col li{border-top:1px solid #DDD3C0;padding:9px 0}
 .fc-r{display:grid;grid-template-columns:3.8em minmax(0,13em) 1fr 3.6em 4.2em;gap:14px;align-items:center;padding:5px 0;font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;line-height:1.2}
 .fc-h{font-family:'EB Garamond',Georgia,serif;font-size:16px;letter-spacing:.14em;text-transform:uppercase;color:#5C5242;border-bottom:1px solid #221E18;padding-bottom:10px}
 .fc-g{font-size:16px;letter-spacing:.14em;text-transform:uppercase;color:#5C5242;padding:16px 0 4px}
@@ -44,7 +51,7 @@ footer a:hover{color:#E3B25A}
 <nav class="site-nav" aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 8px 32px; align-items: center; justify-content: space-between; padding: 18px clamp(20px, 6vw, 96px); border-bottom: 1px solid #221E18">
 <a href="./" aria-label="life is meaningful, home" style="display: flex; align-items: center; padding: 6px 0"><img src="assets/logo-ink.png" alt="life is meaningful" style="display: block; height: 40px; width: auto"></a>
 <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-menu">Menu</button>
-<div id="site-menu" class="menu" style="display: flex; flex-wrap: wrap; gap: 4px 26px; align-items: baseline; font-size: 19px; font-style: italic">
+<div id="site-menu" class="menu" style="display: flex; flex-wrap: wrap; gap: 4px 18px; align-items: baseline; font-size: 19px; font-style: italic">
 <a href="meaning-map.html" style="text-decoration: none; padding: 10px 0">Meaning Map</a>
 <a href="meaning-drivers.html" aria-current="page" style="padding: 10px 0">Meaning Drivers</a>
 <a href="archive.html" style="text-decoration: none; padding: 10px 0">Archive</a>
@@ -52,6 +59,7 @@ footer a:hover{color:#E3B25A}
 <a href="letter.html" style="text-decoration: none; padding: 10px 0">Letter</a>
 <a href="archetype.html" style="text-decoration: none; padding: 10px 0">Archetype</a>
 <a href="about.html" style="text-decoration: none; padding: 10px 0">About</a>
+<a href="share-a-moment.html" style="text-decoration: none; padding: 10px 0">Share your moment</a>
 <a href="meaning-map.html" style="font-style: normal; text-decoration: none; background: #221E18; color: #F7F2E9; padding: 11px 20px">Begin your Meaning Map</a>
 </div>
 </nav>
@@ -63,6 +71,18 @@ footer a:hover{color:#E3B25A}
 <p style="margin: 0; max-width: 680px">They are the reason a moment mattered. I ask people one question: what is the most meaningful moment of your life? Across hundreds of answers, the same 27 values kept showing up.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; font-size: 19px">
 <a href="#relational" style="text-decoration: none; border: 1px solid #9E4638; color: #9E4638; padding: 9px 18px">Relational</a><a href="#self" style="text-decoration: none; border: 1px solid #3F5C85; color: #3F5C85; padding: 9px 18px">Self</a><a href="#transcendent" style="text-decoration: none; border: 1px solid #48694A; color: #48694A; padding: 9px 18px">Transcendent</a><a href="#expressive" style="text-decoration: none; border: 1px solid #8A5F12; color: #8A5F12; padding: 9px 18px">Expressive</a>
+</div>
+</div>
+<div class="md-sheet">
+<div style="display: flex; flex-direction: column; gap: 6px; align-items: center; text-align: center">
+<h3 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(34px, 4vw, 56px); line-height: 1.05">the 27 Meaning Drivers</h3>
+<p style="margin: 0; font-style: italic; color: #5C5242">Four domains. Twenty-seven things that make a moment meaningful.</p>
+</div>
+<div class="md-grid">
+<div class="md-col" style="--c: #B85A4C"><h4>Relational <span>9</span></h4><p>meaning through other people.</p><ul><li>Family</li><li>Love</li><li>Relationships</li><li>Connection</li><li>Community</li><li>Parenthood</li><li>Kindness</li><li>Mentorship and Teaching</li><li>Service</li></ul></div>
+<div class="md-col" style="--c: #4F6E99"><h4>Self <span>8</span></h4><p>meaning through who you are and who you become.</p><ul><li>Growth and Discovery</li><li>Authenticity</li><li>Resilience and Suffering</li><li>Accomplishment</li><li>Health and Well-being</li><li>Heritage</li><li>Purpose</li><li>Freedom</li></ul></div>
+<div class="md-col" style="--c: #5F8460"><h4>Transcendent <span>5</span></h4><p>meaning through something larger than you.</p><ul><li>Spirituality and Faith</li><li>Nature and Awe</li><li>Grief and Loss</li><li>Time</li><li>Gratitude and Perspective</li></ul></div>
+<div class="md-col" style="--c: #B5802A"><h4>Expressive <span>5</span></h4><p>meaning through doing, making, and play.</p><ul><li>Creativity and Expression</li><li>Art and Music</li><li>Adventure and Novelty</li><li>Joy and Play</li><li>Celebration</li></ul></div>
 </div>
 </div>
 </header>
