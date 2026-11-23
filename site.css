@@ -14,6 +14,14 @@ button{cursor:pointer}
 .menu-btn{display:none;font:inherit;font-size:19px;background:none;color:inherit;border:1px solid currentColor;padding:9px 18px;min-height:46px}
 .form-note{margin:0;font-size:18px}
 .hp{position:absolute;left:-9999px}
+.soon{font-family:'EB Garamond',Georgia,serif;font-size:21px;line-height:1.5;color:#221E18;background:#F7F2E9;border:1px solid #221E18;padding:clamp(24px,5vw,44px);max-width:min(520px,calc(100vw - 32px));box-sizing:border-box}
+.soon::backdrop{background:rgba(20,18,14,.66)}
+.soon h2{margin:0 0 10px;font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:clamp(34px,6vw,46px);line-height:1.05}
+.soon p{margin:0 0 20px}
+.soon form{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 14px}
+.soon input{font:inherit;flex:1 1 220px;min-width:0;padding:12px 14px;border:1px solid #221E18;background:#FFFDF8;color:#221E18;min-height:54px;box-sizing:border-box}
+.soon button{font:inherit;min-height:54px;padding:12px 22px;border:1px solid #221E18;background:#221E18;color:#F7F2E9}
+.soon .soon-close{background:none;color:#221E18;border:0;padding:6px 0;min-height:44px;text-decoration:underline}
 @media (max-width:860px){
   .menu-btn{display:block}
   .site-nav .menu{display:none !important;width:100%;flex-direction:column;align-items:flex-start !important;gap:0 !important;padding:8px 0 12px}
